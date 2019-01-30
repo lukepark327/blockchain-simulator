@@ -49,8 +49,8 @@ class Env:
     """
     get
     """
-    def propagation_delay(self, _to, _from):
+    def propagation_delay(self, _from, _to):
         try:
-            return self.prop_delay_table[_to][_from]
+            return self.prop_delay_table[_from][_to]
         except:
             return -1
