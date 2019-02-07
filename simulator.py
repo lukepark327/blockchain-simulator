@@ -3,3 +3,5 @@
 # ToDo: Make blocks randomly
 
 # ToDo: Offer the dashboard with tensorboardX
+
+# ToDo: Master node implementation
