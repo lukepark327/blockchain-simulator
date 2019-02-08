@@ -6,6 +6,9 @@ current version: v1.1.0
 ## How to Use
 
 ### Preconditions
+```bash
+sh preconditions.sh
+```
 * ```npm install``` for onechain, master, and mallcious.   
 
 
