@@ -1,6 +1,8 @@
 # blockchain-simulator
 a general purpose blockchain simulation tool.
 
+current version: v1.1.0
+
 ## ToDo
 * 일반적인 블록체인과의 비교
   * ex) geth, etc.
