@@ -1,3 +1,8 @@
+/**
+ * ToDo: make malicious node
+ * ToDo: make light client
+ */
+
 "use strict";
 const express = require("express");
 const bodyParser = require("body-parser");
