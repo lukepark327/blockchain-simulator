@@ -3,6 +3,12 @@ a general purpose blockchain simulation tool.
 
 current version: v1.1.0
 
+## How to Use
+
+### Preconditions
+* ```npm install``` for onechain, master, and mallcious.   
+
+
 ## ToDo
 * 일반적인 블록체인과의 비교
   * ex) geth, etc.
