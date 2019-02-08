@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-rm -rf node_modules/
-
 rm -rf onechain/wallet/
 rm onechain/nohup.out
 
@@ -11,4 +9,7 @@ rm master/nohup.out
 rm -rf mallcious/wallet/
 rm mallcious/nohup.out
 
+rm -rf node_modules/
 rm table.json
+
+clear

@@ -1,5 +1,7 @@
-import numpy as np
 import random
+
+
+# ToDo: master node
 
 
 class Vnet:
@@ -10,7 +12,6 @@ class Vnet:
         self.prop_delay_avg = self.args.prop_delay_avg / 1000.0
         self.prop_delay_std = self.args.prop_delay_std / 1000.0
 
-        # virtual network
         # key -> (peer, delay)
         """
         {

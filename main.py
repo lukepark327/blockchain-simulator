@@ -17,7 +17,6 @@ def is_windows():
 # define
 IP = "http://127.0.0.1"
 SEED = 950327
-tmp_time = 5
 
 
 if __name__ == '__main__':
@@ -60,8 +59,7 @@ if __name__ == '__main__':
         # 포크 발생 비율
 
     finally:
-
-        sleep(tmp_time)
+        sleep(args.sleep)
 
         if is_windows():
             os.system("taskkill /im node.exe /F")
