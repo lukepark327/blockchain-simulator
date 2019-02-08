@@ -21,6 +21,11 @@ def run():
 
 
 if __name__ == '__main__':
+    # ToDo: Connect all peers with a master node.
+    # ToDo: Make blocks randomly
+    # ToDo: Offer the dashboard with tensorboardX
+    # ToDo: Master node implementation
+
     # random seed
     random.seed(SEED)
     np.random.seed(SEED)
