@@ -1,7 +1,13 @@
+[![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![version](https://img.shields.io/badge/version-v1.2.0-orange.svg)](https://github.com/twodude/blockchain-simulator/blob/master/main.py#L2)
+[![node](https://img.shields.io/badge/node-%3E%3D4.3.2-yellow.svg)](https://nodejs.org/en/)
+[![python](https://img.shields.io/badge/python-3.6.7-blue.svg)](https://www.python.org)  
+
+
 # blockchain-simulator
 a general purpose blockchain simulation tool.
 
-current version: v1.2.0 (MVP)
+> Based on [one-chain](https://github.com/twodude/onechain)   
 
 ## How to Use
 
@@ -58,3 +64,6 @@ TBA
 ```
 flake8 --ignore E501, E722
 ```
+
+# License
+The blockchain-simulator project is licensed under the [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0), also included in our repository in the [LICENSE](https://github.com/twodude/blockchain-simulator/blob/master/LICENSE) file.
