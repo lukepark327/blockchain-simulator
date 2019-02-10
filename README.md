@@ -1,7 +1,7 @@
 # blockchain-simulator
 a general purpose blockchain simulation tool.
 
-current version: v1.1.0
+current version: v1.2.0 (MVP)
 
 ## How to Use
 
@@ -11,6 +11,36 @@ sh preconditions.sh
 ```
 * ```npm install``` for onechain, master, and mallcious.   
 
+### Run
+```bash
+sh run.sh
+```
+
+또는
+
+```bash
+nohup python3 main.py --nodes=400 --neighbors=8 --prop_delay_avg=5000 --prop_delay_std=2000 --sleep=60
+```
+
+* nodes: (full) node 수
+* neighbors: 한 노드와 연결할 다른 (최소) 노드 수
+* prop_delay_avg: propagation delay의 평균
+* prop_delay_std: propagation delay의 표준편차
+* sleep: 대기 시간이 필요한 코드들(예를들어 connection이 완료되기를 기다리거나) 사이에서 기다릴 시간, 초(sec) 단위.
+
+* log를 출력하고 싶을 시 nohup 제외:
+
+```bash
+python3 main.py --nodes=400 --neighbors=8 --prop_delay_avg=5000 --prop_delay_std=2000 --sleep=60
+```
+
+### RESTful API
+
+TBA
+
+### Cleanup
+
+TBA
 
 ## ToDo
 * 일반적인 블록체인과의 비교
@@ -19,6 +49,8 @@ sh preconditions.sh
 
 * propagation delay와 selected neighbors에 대한 topology를 설정해야 함.
   * 현재는 그냥 random.gauss나 random으로 주고 있지만, 이유가 있으면 더 좋음.
+
+* mallcious node, light client 추가하기
 
 ## Trouble Shootings
 
