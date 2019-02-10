@@ -10,6 +10,29 @@ a general purpose blockchain simulation tool.
 > Based on [one-chain](https://github.com/twodude/onechain)   
 
 
+## Abstract
+
+TBA
+
+
+## Details
+
+TBA
+
+
+# Use-Cases
+
+## edu-chain
+
+* [Instructional Blockchain](https://github.com/twodude/educhain)
+
+<!--
+## Plasma DAG
+
+* [Ethereum Plasma Chain](https://github.com/plasma-dag/plasma-client)
+-->
+
+
 # How to Use
 
 ## Preconditions
