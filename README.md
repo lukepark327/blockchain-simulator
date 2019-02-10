@@ -79,7 +79,15 @@ sh cleanup.sh
 ```
 
 
-## ToDo
+# Trouble Shootings
+
+## flake8 convention
+```
+flake8 --ignore E501, E722
+```
+
+
+# ToDo
 * 일반적인 블록체인과의 비교
   * ex) geth, etc.
 
@@ -87,14 +95,6 @@ sh cleanup.sh
   * 현재는 그냥 random.gauss나 random으로 주고 있지만, 이유가 있으면 더 좋음.
 
 * mallcious node, light client 추가하기
-
-
-# Trouble Shootings
-
-## flake8 convention
-```
-flake8 --ignore E501, E722
-```
 
 
 # License
