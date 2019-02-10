@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     try:
         # agent
-        agents = [agent.Agent(IP, args.https + i, args.p2ps + i) for i in range(args.nodes)]
+        agents = [agent.Agent(args, IP, args.https + i, args.p2ps + i) for i in range(args.nodes)]
 
         # environment
         env = environment.Env(args)
@@ -47,6 +47,7 @@ if __name__ == '__main__':
             json.dump(vnet.virtual_connections, f)
 
         # ToDo: Visualization of virtual and real network with propagation delay
+        # ToDo: Use table.json
 
         """master node"""
         # need some interval before connection.
@@ -56,16 +57,25 @@ if __name__ == '__main__':
 
         """create and propagate blocks"""
         # ToDo: Make blocks randomly
+        # ToDo: How frequently?
+        sleep(args.sleep)
 
+        while True:
+            agents[random.randrange(0, len(agents))].mine_block()
+            sleep(random.random() * 10)
+
+        # ToDo: How many steps?
+        # ToDo: What means 'step'? What means 'episode'?
         """analysis"""
         # 각 에이전트의 블록 생성 비율, 채택 비율
         # tps (마스터노드를 통과하는 초당 블록의 갯수)
         # 포크 발생 비율
         # ToDo: Offer the dashboard with tensorboardX
+        # ToDo: Tracking master node
 
     finally:
         # need some interval before kill npm.
-        sleep(args.sleep * 1000)
+        sleep(args.sleep)
 
         if is_windows():
             os.system("taskkill /im node.exe /F")
