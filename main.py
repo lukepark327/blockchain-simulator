@@ -2,6 +2,8 @@
 @version 1.2.0
 """
 
+# TODO: Add mallcious node
+
 from simulator import agent, environment, virtual_network
 from arguments import argparser
 
@@ -46,8 +48,8 @@ if __name__ == '__main__':
         with open('table.json', 'w') as f:
             json.dump(vnet.virtual_connections, f)
 
-        # ToDo: Visualization of virtual and real network with propagation delay
-        # ToDo: Use table.json
+        # TODO: Visualization of virtual and real network with propagation delay
+        # TODO: Use table.json
 
         """master node"""
         # need some interval before connection.
@@ -56,22 +58,24 @@ if __name__ == '__main__':
         master = virtual_network.Master(args, IP, args.master_http, args.master_p2p, agents)
 
         """create and propagate blocks"""
-        # ToDo: Make blocks randomly
-        # ToDo: How frequently?
+        # TODO: Make blocks randomly
+        # TODO: How frequently?
         sleep(args.sleep)
 
+        # TODO: replace 'while' loop to multi-processing
+        # Current implementation doesn't make multiple queries.
         while True:
             agents[random.randrange(0, len(agents))].mine_block()
             sleep(random.random() * 10)
 
-        # ToDo: How many steps?
-        # ToDo: What means 'step'? What means 'episode'?
+        # TODO: How many steps?
+        # TODO: What means 'step'? What means 'episode'?
         """analysis"""
         # 각 에이전트의 블록 생성 비율, 채택 비율
         # tps (마스터노드를 통과하는 초당 블록의 갯수)
         # 포크 발생 비율
-        # ToDo: Offer the dashboard with tensorboardX
-        # ToDo: Tracking master node
+        # TODO: Offer the dashboard with tensorboardX
+        # TODO: Tracking master node
 
     finally:
         # need some interval before kill npm.
