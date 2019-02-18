@@ -69,6 +69,7 @@ if __name__ == '__main__':
         while True:
             # TODO: Replace 'while' loop to multi-processing.
             # Current implementation doesn't make multiple queries.
+
             who_ = random.randrange(0, len(agents))
 
             # How frequently?
@@ -77,6 +78,12 @@ if __name__ == '__main__':
             print("step: {}, agent: {}, delay: {}".format(step, who_, delay_))
 
             agents[who_].mine_block()
+
+            # TODO: A 'reorganization' checking process must be separated with agents' action.
+            # per unit time
+
+            # TODO: 1. Check reorg. ratio.
+            # TODO: 2. Check Behind nodes ratio.
 
             step += 1
             sleep(delay_)
