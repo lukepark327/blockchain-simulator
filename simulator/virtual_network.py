@@ -1,6 +1,7 @@
 import random
 import os
-from platform import system
+import requests
+import ast
 
 
 class Vnet:
@@ -70,9 +71,6 @@ class Master:
         # run master node
         # set environment variable PEERS first.
 
-        def is_windows():
-            return True if system() == "Windows" else False
-
         try:
             os.chdir("./master")
 
@@ -87,13 +85,15 @@ class Master:
             os.environ['HTTP_PORT'] = str(self.http_port)
             os.environ['P2P_PORT'] = str(self.p2p_port)
 
-            if is_windows():
-                os.system("START /B npm start")
-            else:
-                os.system("npm start &")
+            os.system("nohup npm start </dev/null &>/dev/null &")
+            # os.system("npm start &")
 
         finally:
             os.unsetenv('PEERS')
             os.unsetenv('HTTP_PORT')
             os.unsetenv('P2P_PORT')
             os.chdir("../")
+
+    def get_peers(self):
+        res = requests.get(self.uri + '/peers')
+        return ast.literal_eval(res.text)
