@@ -2,7 +2,8 @@
 @version 1.2.0
 """
 
-# TODO: Add mallcious node
+# TODO: Add mallcious nodes
+# TODO: Add light clients
 
 from simulator import agent, environment, virtual_network
 from arguments import argparser
@@ -30,52 +31,44 @@ np.random.seed(SEED)
 
 
 if __name__ == '__main__':
-    # argparser
     args = argparser()
 
     try:
-        # agent
         agents = [agent.Agent(args, IP, args.https + i, args.p2ps + i) for i in range(args.nodes)]
-
-        # environment
         env = environment.Env(args)
-
-        """virtual network"""
         vnet = virtual_network.Vnet(args, agents)
-        # pprint(vnet.virtual_connections)
 
-        # save propagation delay table
+        # pprint(vnet.virtual_connections)
         with open('table.json', 'w') as f:
             json.dump(vnet.virtual_connections, f)
 
         # TODO: Visualization of virtual and real network with propagation delay
-        # TODO: Use table.json
+        # Use table.json
 
-        """master node"""
         # need some interval before connection.
-        sleep(args.sleep)
+        input("Press Enter to Create Virtual Connections")
 
         master = virtual_network.Master(args, IP, args.master_http, args.master_p2p, agents)
 
-        """create and propagate blocks"""
-        # TODO: Make blocks randomly
-        # TODO: How frequently?
-        sleep(args.sleep)
+        input("Press Enter to Start Simulation")
 
         # TODO: replace 'while' loop to multi-processing
         # Current implementation doesn't make multiple queries.
         while True:
             agents[random.randrange(0, len(agents))].mine_block()
+
+            # How frequently?
             sleep(random.random() * 10)
 
         # TODO: How many steps?
-        # TODO: What means 'step'? What means 'episode'?
+        # What means 'step'? What means 'episode'?
+
         """analysis"""
         # 각 에이전트의 블록 생성 비율, 채택 비율
         # tps (마스터노드를 통과하는 초당 블록의 갯수)
         # 포크 발생 비율
         # TODO: Offer the dashboard with tensorboardX
-        # TODO: Tracking master node
+        # Tracking master node
 
     finally:
         # need some interval before kill npm.

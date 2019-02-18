@@ -4,7 +4,6 @@ import argparse
 def argparser():
     parser = argparse.ArgumentParser()
 
-    """Simulation Settings"""
     parser.add_argument('--nodes', type=int, default=120,
                         help='The number of full nodes constructing blockchain.')
 
@@ -29,7 +28,6 @@ def argparser():
     parser.add_argument('--neighbors', type=int, default=8,
                         help='Each node initiates links to the amount of \'neighbors\' selected neighbors.')
 
-    """hyperparameters"""
     parser.add_argument('--sleep', type=float, default=2.0,
                         help='The interval between specific lines.')
 
