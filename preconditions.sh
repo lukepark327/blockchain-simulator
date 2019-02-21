@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-nohup npm install ./onechain/ --silent
-nohup npm install ./master/ --silent
+npm install ./onechain/ </dev/null &>/dev/null
+npm install ./master/ </dev/null &>/dev/null

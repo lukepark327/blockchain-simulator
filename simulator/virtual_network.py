@@ -1,3 +1,5 @@
+from utils import get_delay
+
 import random
 import os
 import requests
@@ -51,7 +53,7 @@ class Vnet:
         # prop_delay_table[_from][_to]: propagation delay table (_from)->(_to)
         return {
             agent.p2p_port: {
-                _to: abs(random.gauss(self.prop_delay_avg, self.prop_delay_std))
+                _to: get_delay(self.prop_delay_avg, self.prop_delay_std)
                 for _to in virtual_peers[agent.p2p_port]
             }
             for agent in agents
