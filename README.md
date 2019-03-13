@@ -5,6 +5,9 @@
 
 
 # blockchain-simulator
+
+* [edu-chain](https://github.com/twodude/educhain)과 통합 예정. *
+
 a general purpose blockchain simulation tool.
 
 > Based on [one-chain](https://github.com/twodude/onechain)   
