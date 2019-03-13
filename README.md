@@ -4,9 +4,10 @@
 [![python](https://img.shields.io/badge/python-3.6.7-blue.svg)](https://www.python.org)  
 
 
-# blockchain-simulator
+# Will be integrated with [edu-chain](https://github.com/twodude/educhain)
 
-* [edu-chain](https://github.com/twodude/educhain)과 통합 예정. *
+
+# blockchain-simulator
 
 a general purpose blockchain simulation tool.
 
